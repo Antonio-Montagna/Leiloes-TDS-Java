@@ -8,5 +8,5 @@ Projeto Java desenvolvido para a UC11 visando versionamento de Software do curso
 ## Objetivo do Projeto 🎯
 Realizar o cadastro de itens de uma casa de Leilão
 
-## Status do Prjeto ⌛
+## Status do Projeto ⌛
 Em desenvolvimento...
