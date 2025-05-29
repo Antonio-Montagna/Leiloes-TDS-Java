@@ -1,3 +1,8 @@
+
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -132,6 +137,7 @@ public class cadastroVIEW extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cadastroNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroNomeActionPerformed
@@ -149,7 +155,11 @@ public class cadastroVIEW extends javax.swing.JFrame {
         produto.setStatus(status);
         
         ProdutosDAO produtodao = new ProdutosDAO();
-        produtodao.cadastrarProduto(produto);
+        try {
+            produtodao.cadastrarProduto(produto);
+        } catch (SQLException ex) {
+            Logger.getLogger(cadastroVIEW.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
