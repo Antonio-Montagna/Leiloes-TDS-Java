@@ -94,7 +94,7 @@ public class ProdutosDAO {
             prep = conn.prepareStatement(sql);
 
             prep.setString(1, "Vendido");
-            prep.setInt(1, idProduto);
+            prep.setInt(2, idProduto);
 
             prep.executeUpdate();
             JOptionPane.showMessageDialog(null, "Produto marcado como 'Vendido' com sucesso!");
